@@ -9,3 +9,21 @@
 
 # 385916 -> yes
 # 123456 -> no
+from time import sleep
+
+NumTicket = int(input('Введите номер билета: '))
+a = NumTicket % 10
+b = NumTicket // 10 % 10
+c = NumTicket // 100 % 10
+d = NumTicket // 1000 % 10
+e = NumTicket // 10000 % 10
+f = NumTicket // 100000 % 10
+sleep(1)                                        #  слишком быстро выводились строки о том что выполняется проверка и результ, решил добавить задержку вывода
+print('Проверяем Ваш билет на счастливость')    #  
+sleep(3)                                        #
+NumTicket1 = a + b + c
+NumTicket2 = d + e + f
+if NumTicket1 == NumTicket2:
+  print('Да, у Вас счастливй билет!')
+else: 
+  print('Не повезло, попробуйте еще!') 
